@@ -1,0 +1,262 @@
+{
+  "main": {
+    "id": "efe31a8625ae5ce0",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c022d423d5ccc00",
+        "type": "tabs",
+        "dimension": 61.14620938628159,
+        "children": [
+          {
+            "id": "a021af8d53d18cee",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Keeper/Keeper Writeup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Keeper Writeup"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a06d7a851d9b00ed",
+        "type": "tabs",
+        "dimension": 38.85379061371842,
+        "children": [
+          {
+            "id": "ed22d7bd1c641389",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 liners.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1 liners"
+            }
+          },
+          {
+            "id": "4979489dc2e05846",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Knife/Knife Writeup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Knife Writeup"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ec733031b01d1c74",
+    "type": "split",
+    "children": [
+      {
+        "id": "7012ffafda0ffbd8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ca2205629bb44d88",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e4687868223ee8f0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "ac337103f4f815f8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "83b493b75a7c5955",
+    "type": "split",
+    "children": [
+      {
+        "id": "ec40b403466cb0e3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9200ed4dcdfb280d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "1 liners.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for 1 liners"
+            }
+          },
+          {
+            "id": "6b98b2ca97360b5c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Bashed/Bashed Writeup.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Bashed Writeup"
+            }
+          },
+          {
+            "id": "86faea6e44d87e55",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "3aed84476ba3760d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "ca87da8f05c2a210",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Bashed/Bashed Writeup.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Bashed Writeup"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "4979489dc2e05846",
+  "lastOpenFiles": [
+    "Template Writeup.md",
+    "Knife/Knife Writeup.md",
+    "Main Points Summary.md",
+    "Knife 1/SS",
+    "Knife 1",
+    "Knife/SS",
+    "Knife",
+    "Keeper/Keeper Writeup.md",
+    "Keeper/SS/Pasted image 20260305200803.png",
+    "Keeper/SS/Pasted image 20260305212423.png",
+    "Keeper/SS/Pasted image 20260305211654.png",
+    "Keeper/SS/Pasted image 20260305211048.png",
+    "Keeper/SS/Pasted image 20260305210802.png",
+    "Keeper/SS/Pasted image 20260305210801.png",
+    "Keeper/SS/Pasted image 20260305210529.png",
+    "Keeper/SS/Pasted image 20260305210124.png",
+    "1 liners.md",
+    "Keeper/SS/Pasted image 20260305203047.png",
+    "Keeper/SS/Pasted image 20260305202731.png",
+    "Keeper/SS",
+    "Keeper/Untitled.md",
+    "Dog/Dog Writeup.md",
+    "Keeper",
+    "Devvortex/Devvortex Writeup.md",
+    "Dog/SS",
+    "Dog",
+    "Devvortex/SS",
+    "Devvortex",
+    "Cozyhosting/Cozyhosting Writeup.md",
+    "Bashed/Bashed Writeup.md",
+    "Boardlight/Boardlight Writeup.md",
+    "Codify/Codify Writeup.md",
+    "Busqueda/Busqueda Writeup.md",
+    "Broker/Broker Writeup.md",
+    "Analytics/Analytics Writeup.md",
+    "Welcome.md"
+  ]
+}
