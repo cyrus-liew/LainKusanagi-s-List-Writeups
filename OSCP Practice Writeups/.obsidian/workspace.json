@@ -6,7 +6,7 @@
       {
         "id": "654b01c1bf142e4b",
         "type": "tabs",
-        "dimension": 53.47472924187726,
+        "dimension": 53.47472924187727,
         "children": [
           {
             "id": "eef14103e9c2447e",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/Pilgrimage/Pilgrimage Writeup.md",
+                "file": "HTB/SolidState/SolidState Writeup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pilgrimage Writeup"
+              "title": "SolidState Writeup"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "a06d7a851d9b00ed",
         "type": "tabs",
-        "dimension": 46.525270758122744,
+        "dimension": 46.52527075812273,
         "children": [
           {
             "id": "ed22d7bd1c641389",
@@ -71,8 +71,7 @@
               "title": "Main Points Summary"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -234,39 +233,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "eef14103e9c2447e",
+  "active": "ed22d7bd1c641389",
   "lastOpenFiles": [
-    "Template Writeup.md",
-    "HTB/Pilgrimage/Pilgrimage Writeup.md",
-    "HTB/Pandora/Pandora Writeup.md",
+    "HTB/SolidState/SolidState Writeup.md",
+    "HTB/SolidState/SS/Pasted image 20260317195433.png",
+    "1 liners.md",
+    "HTB/SolidState/SS/Pasted image 20260317194912.png",
+    "Useful things.md",
     "HTB/Main Points Summary.md",
+    "HTB/SolidState/SS/Pasted image 20260317193639.png",
+    "HTB/SolidState/SS/Pasted image 20260317192940.png",
+    "HTB/SolidState/SS/Pasted image 20260317192822.png",
+    "HTB/SolidState/SS/Pasted image 20260317190603.png",
+    "HTB/SolidState/SS/Pasted image 20260317190342.png",
+    "HTB/SolidState/SS/Pasted image 20260317190320.png",
+    "HTB/SolidState/SS/Pasted image 20260317185805.png",
+    "Template Writeup.md",
+    "HTB/Sea/Sea Writeup.md",
+    "HTB/SolidState/SS",
+    "HTB/SolidState",
+    "HTB/Sea/SS/Pasted image 20260316164644.png",
+    "HTB/Popcorn/Popcorn Writeup.md",
+    "HTB/Sea/SS",
+    "HTB/Sea",
+    "HTB/Posion/Poison Writeup.md",
+    "HTB/Popcorn/SS",
+    "HTB/Popcorn",
+    "HTB/Pilgrimage/Pilgrimage Writeup.md",
+    "HTB/Posion/SS",
+    "HTB/Posion",
+    "HTB/Pandora/Pandora Writeup.md",
+    "HTB/Dog/Dog Writeup.md",
     "HTB/Pilgrimage/SS",
     "HTB/Pilgrimage",
-    "Useful things.md",
-    "HTB/Pandora/SS/Pasted image 20260313182845.png",
-    "HTB/Pandora/SS/Pasted image 20260313200710.png",
-    "HTB/Pandora/SS/Pasted image 20260313195645.png",
-    "HTB/Pandora/SS/Pasted image 20260313195909.png",
-    "HTB/Pandora/SS/Pasted image 20260313193829.png",
-    "HTB/Pandora/SS/Pasted image 20260313194513.png",
-    "HTB/Pandora/SS/Pasted image 20260313194140.png",
-    "1 liners.md",
-    "HTB/Pandora/SS/Pasted image 20260313193827.png",
-    "HTB/Pandora/SS/Pasted image 20260313193602.png",
-    "HTB/Pandora/SS/Pasted image 20260313193557.png",
     "HTB/OpenAdmin/OpenAdmin Writeup.md",
     "HTB/Nineveh/Nineveh Writeup.md",
-    "HTB/Pandora/SS",
-    "HTB/Pandora",
-    "Pnadora",
     "HTB/Bashed/Bashed Writeup.md",
-    "HTB",
-    "HTB/OpenAdmin/SS",
-    "HTB/OpenAdmin",
     "Untitled.canvas",
     "HTB/Networked/Networked Writeup.md",
-    "HTB/Nineveh/SS",
-    "HTB/Nineveh",
     "HTB/Monitored/Monitored Writeup.md",
     "HTB/Busqueda/Busqueda Writeup.md",
     "HTB/Codify/Codify Writeup.md",
@@ -275,13 +279,7 @@
     "HTB/Mentor/Mentor Writeup.md",
     "HTB/Jarvis/Jarvis Writeup.md",
     "HTB/LinkVortex/LinkVortex Writeup.md",
-    "HTB/Dog/Dog Writeup.md",
     "HTB/Irked/Irked Writeup.md",
-    "HTB/Help/Help Writeup.md",
-    "HTB/Editorial/Editorial Writeup.md",
-    "HTB/Builder/Builder Writeup.md",
-    "HTB/Precious/Precious Writeup.md",
-    "HTB/Nibbles/Nibbles Writeup.md",
-    "HTB/Knife/Knife Writeup.md"
+    "HTB/Help/Help Writeup.md"
   ]
 }

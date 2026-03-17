@@ -75,3 +75,15 @@
 
 [[Pandora Writeup]]
 1. UDP scan for `SNMP`, read credentials from `SNMP`, SSH access and enumerate `/var/www` and `apache` config to find internal site, port forward to gain access to internal site, locate public exploit to gain web shell as user, upload SSH key for SSH access, enumerate `SUID` binaries for executable, enumerate executable using `ltrace` or `cat`, hijack relative path to run own script as `sudo` to launch root shell
+
+[[Pilgrimage Writeup]]
+1. Fuzz directories for exposed `git` repo, dump `git `repo and find vulnerable software, use public exploit to dump database, read database for user credentials and gain SSH access, check `ps auxww` to find script being run as root, enumerate script to find vulnerable executable, use public exploit to gain root access
+
+[[Poison Writeup]]
+1. Enumerate site to find password file, decode password, find LFI vulnerability and read `/etc/passwd` for username, SSH access as user, unzip zip file with password to get encrypted VNC password, enumerate network ports to find VNC server running, port forward VNC server port, connect with VNC client to gain root access (alternative method for initial access involves log poisoning)
+
+[[Popcorn Writeup]]
+1. Enumerate site to find vulnerable web application, locate public exploit to create and upload PHP web shell, gain shell access as `www-data`, enumerate user's home directory for Linux MOTD file in `.cache`, locate public exploit for MOTD and gain root access
+
+[[Sea Writeup]]
+1. Fuzz directories for license file and version number, Google the information to find the CMS, locate public exploit for CMS to get shell as `www-data`, enumerate CMS database to get user credentials for pivoting, enumerate network ports to find internal server, port forward internal server to find web application, enumerate application to find command injection vulnerability, upload public key to  root SSH directory for SSH access as root

@@ -11,11 +11,13 @@ VHOST enumeration
 1. ` ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -u http://example.com/ -H "Host: FUZZ.example.com" -mc all -fw <> ` - need to run with `-mc all` or the filter might filter out some extra things not sure why
 
 `.git` repositories
-1. ` git status ` - may show uncommitted changes
-2. ` git restore . ` - restores all files
-3. ` git restore . && git diff ` - shows uncommitted changes
-4. ` git log ` - shows commit history
-5. ` git show <commit ID> ` - shows individual commit changes
+1. ` wget --mirror -I .git` - download `git` repo
+2. ` git-dumper ` - better tool for dumping repo
+3. ` git status ` - may show uncommitted changes
+4. ` git restore . ` - restores all files
+5. ` git restore . && git diff ` - shows uncommitted changes
+6. ` git log ` - shows commit history
+7. ` git show <commit ID> ` - shows individual commit changes
 
 SQL Injection
 1. Basic enumeration by adding a `'` to end of input and checking for any errors - errors mean that injection may be possible
@@ -32,6 +34,8 @@ Linux filesystem / privilege escalation enumeration
 4. Check `/home` directories of other users - sometimes there are files that can be read, and used to pivot
 5. Remember to check all folders, especially if they are hidden (beginning with a `.`)
 6. Check `cron` jobs
+7. Check listening ports - `ss -ntplu` or `netstat -an`
+8. Check processes with `pspy` - scripts may be running in the back as root that you cannot see as a user
 
 Linux manual `SUID` file enumeration
 1. ` find / -type f -perm -04000 -ls 2>/dev/null `
