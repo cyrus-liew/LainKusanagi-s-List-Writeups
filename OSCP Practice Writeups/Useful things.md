@@ -27,7 +27,7 @@ SQL Injection
 2. ` snmpbrute.py ` - for brute forcing `SNMP` community strings (don't use `onesixtyone` as that only checks for `SNMP v1`)
 3. `SNMP` config files located at `/etc/snmp/snmp.conf` and `/etc/snmp/snmpd.conf`, may contain credentials
 
-Linux filesystem / privilege escalation enumeration
+Linux filesystem / privilege escalation enumeration (most of these should be run automatically with `linpeas.sh`)
 1. Check `sudo -l` - even if you do not have the user's password
 2. `SUID` binaries - Check anything that is not a default Linux `SUID` binary
 3. Check default config file paths for web servers, CMS, applications - focus on the apps or services that were enumerated previously, e.g. check `SNMP` config files if `SNMP` is running
@@ -36,12 +36,18 @@ Linux filesystem / privilege escalation enumeration
 6. Check `cron` jobs
 7. Check listening ports - `ss -ntplu` or `netstat -an`
 8. Check processes with `pspy` - scripts may be running in the back as root that you cannot see as a user
+9. Check `/backup` and `/opt` - may contain some interesting files
+10. Check user's groups - groups like `adm` and `lxd` are interesting
+11. Check `systemctl list-timers --all` - alternative to `cron`
 
 Linux manual `SUID` file enumeration
 1. ` find / -type f -perm -04000 -ls 2>/dev/null `
 
 Linux manual service enumeration
 1. ` for service in "postgresql" "httpd" "mysqld" "nagios" "ndo2db" "npcd" "snmptt" "ntpd" "crond" "shellinaboxd" "snmptrapd" "php-fpm"; do find /etc/systemd/ -name "$service.service"; done | while read service_file; do ls -l $(cat "$service_file" | grep Exec | cut -d= -f 2 | cut -d' ' -f 1); done | sort -u `
+
+Windows manual privilege escalation
+1. ` netstat -ano `, then ` tasklist /v | findstr PID ` to find what process is running on what port
 
 `cron` enumeration
 1. ` ls -lah /etc/cron* ` - List all `cron` jobs with permissions

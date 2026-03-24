@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HTB/SolidState/SolidState Writeup.md",
+                "file": "HTB/Windows/Buff/Buff Writeup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SolidState Writeup"
+              "title": "Buff Writeup"
             }
           }
         ]
@@ -71,7 +71,8 @@
               "title": "Main Points Summary"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +92,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -128,7 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 426.5
   },
   "right": {
     "id": "83b493b75a7c5955",
@@ -233,53 +234,53 @@
       "bases:Create new base": false
     }
   },
-  "active": "ed22d7bd1c641389",
+  "active": "40029b5a49eede89",
   "lastOpenFiles": [
-    "HTB/SolidState/SolidState Writeup.md",
-    "HTB/SolidState/SS/Pasted image 20260317195433.png",
-    "1 liners.md",
-    "HTB/SolidState/SS/Pasted image 20260317194912.png",
+    "HTB/Windows/Buff/Buff Writeup.md",
     "Useful things.md",
-    "HTB/Main Points Summary.md",
-    "HTB/SolidState/SS/Pasted image 20260317193639.png",
-    "HTB/SolidState/SS/Pasted image 20260317192940.png",
-    "HTB/SolidState/SS/Pasted image 20260317192822.png",
-    "HTB/SolidState/SS/Pasted image 20260317190603.png",
-    "HTB/SolidState/SS/Pasted image 20260317190342.png",
-    "HTB/SolidState/SS/Pasted image 20260317190320.png",
-    "HTB/SolidState/SS/Pasted image 20260317185805.png",
+    "HTB/Windows/Netmon/Netmon Writeup.md",
+    "HTB/Windows/Jerry/Jerry Writeup.md",
+    "HTB/Windows/Jerry/SS/Pasted image 20260324173526.png",
+    "HTB/Windows/Servmon/Servmon Writeup.md",
+    "1 liners.md",
     "Template Writeup.md",
-    "HTB/Sea/Sea Writeup.md",
-    "HTB/SolidState/SS",
-    "HTB/SolidState",
-    "HTB/Sea/SS/Pasted image 20260316164644.png",
-    "HTB/Popcorn/Popcorn Writeup.md",
-    "HTB/Sea/SS",
-    "HTB/Sea",
-    "HTB/Posion/Poison Writeup.md",
-    "HTB/Popcorn/SS",
-    "HTB/Popcorn",
-    "HTB/Pilgrimage/Pilgrimage Writeup.md",
-    "HTB/Posion/SS",
-    "HTB/Posion",
-    "HTB/Pandora/Pandora Writeup.md",
-    "HTB/Dog/Dog Writeup.md",
-    "HTB/Pilgrimage/SS",
-    "HTB/Pilgrimage",
-    "HTB/OpenAdmin/OpenAdmin Writeup.md",
-    "HTB/Nineveh/Nineveh Writeup.md",
-    "HTB/Bashed/Bashed Writeup.md",
-    "Untitled.canvas",
-    "HTB/Networked/Networked Writeup.md",
-    "HTB/Monitored/Monitored Writeup.md",
-    "HTB/Busqueda/Busqueda Writeup.md",
-    "HTB/Codify/Codify Writeup.md",
-    "HTB/Magic/Magic Writeup.md",
-    "HTB/Underpass/Underpass Writeup.md",
-    "HTB/Mentor/Mentor Writeup.md",
-    "HTB/Jarvis/Jarvis Writeup.md",
-    "HTB/LinkVortex/LinkVortex Writeup.md",
-    "HTB/Irked/Irked Writeup.md",
-    "HTB/Help/Help Writeup.md"
+    "HTB/Windows/Servmon/SS",
+    "HTB/Windows/Servmon",
+    "HTB/Windows/Buff/SS/Pasted image 20260324194328.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324210223.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324210128.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324210021.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324205539.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324205532.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324204722.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324204641.png",
+    "HTB/Windows/Buff/SS/Pasted image 20260324204139.png",
+    "HTB/Windows/Buff/SS",
+    "HTB/Windows/Buff",
+    "HTB/Windows/Netmon/SS",
+    "HTB/Windows/Netmon",
+    "HTB/Main Points Summary.md",
+    "HTB/Linux/UpDown/UpDown Writeup.md",
+    "HTB/Windows/Jerry/SS",
+    "HTB/Windows/Jerry",
+    "HTB/Linux/Usage/Usage Writeup.md",
+    "HTB/Windows AD",
+    "HTB/Untitled.md",
+    "HTB/Windows",
+    "HTB/Linux/TartarSauce/TartarSauce Writeup.md",
+    "HTB/Linux/Tabby/Tabby Writeup.md",
+    "HTB/Linux/SwagShop/SwagShop Writeup.md",
+    "HTB/Linux/Sunday/Sunday Writeup.md",
+    "HTB/Linux/SolidState/SolidState Writeup.md",
+    "HTB/Linux/Sea/Sea Writeup.md",
+    "HTB/Linux/Popcorn/Popcorn Writeup.md",
+    "HTB/Linux/Posion/Poison Writeup.md",
+    "HTB/Linux/Pilgrimage/Pilgrimage Writeup.md",
+    "HTB/Linux/Pandora/Pandora Writeup.md",
+    "HTB/Linux/Dog/Dog Writeup.md",
+    "HTB/Linux/OpenAdmin/OpenAdmin Writeup.md",
+    "HTB/Linux/Nineveh/Nineveh Writeup.md",
+    "HTB/Linux/Bashed/Bashed Writeup.md",
+    "Untitled.canvas"
   ]
 }

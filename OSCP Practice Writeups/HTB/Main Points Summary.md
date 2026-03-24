@@ -87,3 +87,24 @@
 
 [[Sea Writeup]]
 1. Fuzz directories for license file and version number, Google the information to find the CMS, locate public exploit for CMS to get shell as `www-data`, enumerate CMS database to get user credentials for pivoting, enumerate network ports to find internal server, port forward internal server to find web application, enumerate application to find command injection vulnerability, upload public key to  root SSH directory for SSH access as root
+
+[[SolidState Writeup]]
+1. Enumerate open ports for find email server and version, reset passwords for email users with server, login to POP3 to read emails to find credentials, gain SSH access, locate public exploit for server to open unrestricted shell, run `pspy` to snoop for root `cron` jobs, edit python script being run to get root shell
+
+[[Sunday Writeup]]
+1. Enumerate ports to find `finger` service running, dictionary attack on service to enumerate usernames, dictionary attack on SSH to gain access, enumerate `/backup` to find `/etc/shadow` backup and read password hash. crack hash and get user access, enumerate `sudo -l` to find `wget` with root permissions, privilege escalate using `wget`
+
+[[SwagShop Writeup]]
+1. Enumerate site to find ecommerce software, enumerate software to find version, locate public exploits to gain shell access as `www-data`, enumerate `sudo -l` for privilege escalation with `vi`
+
+[[Tabby Writeup]]
+1. Enumerate site to find LFI, find `tomcat-users.xml` file path and include it, use credentials to upload reverse shell to `tomcat` and get shell access, exfiltrate and brute force a zip file to get password, use password for user access, enumerate groups for `lxd` membership, privilege escalate using `lxd`
+
+[[TartarSauce Writeup]]
+1. Fuzz site to find `WordPress` directory, enumerate to find vulnerable plugin, public exploit for shell access as `www-data`, `sudo -l` for user access, `systemctl list-timers` to find vulnerable service binary, enumerate script to find vulnerability in running `tar` as root, abuse `tar` maintaining `SUID` permissions within archive when extracting as root for privilege escalation
+
+[[Usage Writeup]]
+1. Enumerate site for blind SQL injection, `SQLmap` to dump database to find admin password, locate public exploit for admin dashboard for shell access, read files in home directory to pivot, `sudo -l` for vulnerable binary, abuse wildcard in `7za` command for privilege escalation
+
+[[UpDown Writeup]]
+1. Fuzz directories for `git` repo, fuzz subdomains for dev site, enumerate `git` repo for required headers for access to dev site, access dev site and upload PHAR file for shell access, enumerate `SUID` binary and abuse python2's `input` function for code execution, enumerate `sudo -l` to find `easy_install` python script for privilege escalation
