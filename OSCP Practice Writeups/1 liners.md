@@ -1,4 +1,4 @@
-Nmap
+wzNmap
 1. `nmap -sVC -p- -v -T4 -sT --open IP_ADDRESS -oN results`
 2. `sudo nmap -sU -p 1-1024 -v IP_ADDRESS -oA results_UDP`
 

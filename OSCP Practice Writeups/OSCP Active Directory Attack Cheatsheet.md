@@ -405,8 +405,3 @@ nxc smb/winrm/rdp/mssql $IP -u <user> -p <pass>
 
 ---
 
-If you want, I can turn this into:
-
-- a **1-page ultra-condensed exam sheet**, or
-    
-- a **step-by-step attack flow (decision tree style)** which is super useful during OSCP.

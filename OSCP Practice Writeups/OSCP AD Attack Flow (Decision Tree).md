@@ -373,11 +373,3 @@ Search for:
     
 
 ---
-
-### 🎯 Key Principle:
-
-> **AD is a credential game, not an exploit game**
-
----
-
-If you want, I can compress this into a **super aggressive 1-page “during-exam” checklist** (even shorter than this) or tailor it specifically to **PG Practice / OSCP AD sets**.
